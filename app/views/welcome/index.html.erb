@@ -1,1 +1,7 @@
 Select a House
+<section id='houses'>
+  <%= form_tag(house_path, method: 'get') do %>
+    <%= select_tag(:house, options_for_select(houses)) %>
+    <%= submit_tag "Search Members" %>
+  <% end %>
+</section>
