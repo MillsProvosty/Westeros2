@@ -14,16 +14,10 @@ describe "As a user on the root page" do
 
     click_button 'Get House Members'
 
-    expect(current_path).to eq('/search')
+    expect(current_path).to eq(search_path)
 
-    save_and_open_page
-
-
-
-
-    visit '/houses'
-
-    expect(page).to have_content("House Algood")
+    expect(page).to have_content('Balon Greyjoy')
+    expect(page).to have_content('38')
   end
 end
 

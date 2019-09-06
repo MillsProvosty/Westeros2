@@ -1,8 +1,10 @@
-<h1>House <%= @members %></h1>
+<h1>House <%= @house_name %></h1>
 <p><%= @member_count %> Members</p>
 <ul>
   <% @members.each do |member| %>
-      <li>Name: <%= member.name %></li>
-      <li> ID: <%= member.id %></li>
+    <p id='house_members'>
+      <li id='member-name'>Name: <%= member.name %></li>
+      <li id='member_id'> ID: <%= member.id %></li>
+    </p>
   <% end %>
 </ul>
