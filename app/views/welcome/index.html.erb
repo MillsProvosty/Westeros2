@@ -1,0 +1,7 @@
+<h3>Select a House</h3>
+<section id='houses'>
+  <%= form_tag(search_path, method: 'get') do %>
+    <%= select_tag(:house, options_for_select(houses)) %>
+    <%= submit_tag "Get House Members" %>
+  <% end %>
+</section>
