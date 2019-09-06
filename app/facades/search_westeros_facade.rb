@@ -3,14 +3,14 @@ class SearchWesterosFacade
     retrieve_hash(house)
   end
 
-  def create_members_object(hash)
+  def create_members_object(hash, house)
     hash.map do |h|
-      Person.new(h)
+      Person.new(h, house)
     end
   end
 
   def retrieve_hash(house)
    hash = WesterosService.new.retrieve(house)
-   create_members_object(hash[:data].first[:attributes][:members])
+   create_members_object(hash[:data].first[:attributes][:members], house)
   end
 end

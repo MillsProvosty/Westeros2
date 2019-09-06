@@ -1,7 +1,7 @@
-<h1>House <%= facade.members %></h1>
-<p><%= facade.member_count %> Members</p>
+<h1>House <%= @members %></h1>
+<p><%= @member_count %> Members</p>
 <ul>
-  <% facade.members.each do |member| %>
+  <% @members.each do |member| %>
       <li>Name: <%= member.name %></li>
       <li> ID: <%= member.id %></li>
   <% end %>
