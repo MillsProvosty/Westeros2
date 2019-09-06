@@ -1,7 +1,6 @@
 class WesterosService
   def retrieve(house)
     get_json("/api/v1/house/#{house}?api_key=#{ENV["WESTEROS_API_KEY"]}")
-    binding.pry
   end
 
     private
